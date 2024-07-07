@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200;300&display=swap');
+@import url('https://fonts.cdnfonts.com/css/agencyfb-2');
+@import url('https://fonts.googleapis.com/css?family=Electrolize');
+
+/*
+  Fluid typography:
+  https://cqi-units-fluid-typography.webflow.io/
+  https://webflow.com/made-in-webflow/website/cqi-units-fluid-typography
+  https://levelup.gitconnected.com/stop-using-media-queries-for-font-sizes-23e596f27b92
+  font-size: clamp(minimum, preferred, maximum);
+*/
+
+article {
+  container-type: inline-size;
+
+  h1 {font-size: clamp(1.5rem, 4cqi, 2rem);}
+  h2 {font-size: clamp(1.2rem, 3.5cqi, 1.7rem);}
+  h3 {font-size: clamp(1rem, 3cqi, 1.5rem);}
+
+}
+
+section {
+  container-type: inline-size;
+
+  p {
+    font-size: clamp(1rem, 3cqi, 1.5rem);
+    line-height: clamp(1rem, 4cqi, 2.5rem);
+  }
+}
