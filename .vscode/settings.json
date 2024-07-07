@@ -1,0 +1,11 @@
+{
+  "cSpell.words": [
+    "Oxanium",
+    "SCROLLBARS"
+  ],
+  "css.hover.documentation": false,
+  "css.hover.references": false,
+  "css.format.spaceAroundSelectorSeparator": true,
+  "less.format.spaceAroundSelectorSeparator": true,
+  "html-to-css-autocompletion.triggerCharacters": true
+}
