@@ -10,6 +10,10 @@
   font-size: clamp(minimum, preferred, maximum);
 */
 
+body {
+  line-height: 1.5;
+}
+
 article {
   container-type: inline-size;
 
@@ -23,7 +27,6 @@ section {
   container-type: inline-size;
 
   p {
-    font-size: clamp(1rem, 3cqi, 1.5rem);
-    line-height: clamp(1rem, 4cqi, 2.5rem);
+    font-size: clamp(1.25rem, 3cqi, 1.5rem);
   }
 }
