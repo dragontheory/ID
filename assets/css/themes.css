@@ -30,7 +30,8 @@ iframe {
   --scrollbar-color: rgba(48, 190, 255, 0.0);
   --stroke-opacity: 1;
 
-  --bg-color: 19, 20, 23;
+  --bg-color: 51, 52, 67;
+  /* --bg-color: 19, 20, 23; */
   --bg-opacity: 1.0;
   --bg-02-color: 39, 49, 54;
   --bg-02-opacity: 1.0;
@@ -127,8 +128,12 @@ nav a {
   text-wrap: nowrap;
 }
 
-svg path {
+/* svg path {
   fill: currentColor;
+} */
+
+svg {
+  fill: currentColor
 }
 
 
@@ -381,4 +386,11 @@ em {
 
   outline: var(--outline-width, var(--outline-size)) var(--outline-style, solid) var(--outline-color, currentColor);
   outline-offset: var(--outline-offset, var(--outline-size));
+}
+
+
+@media (prefers-color-scheme: dark) {
+  svg {
+    fill: currentColor
+  }
 }
