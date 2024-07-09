@@ -1,7 +1,7 @@
 
 <p align="center">
 <img
-  src="assets/images/logos/TROVE.svg"
+  src="assets/images/logos/seal.svg"
   alt="International Dance | Home of the Christina Heimlich Dancers"
   title="International Dance"
   width="400" />
