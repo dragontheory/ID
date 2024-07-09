@@ -23,6 +23,12 @@ body {
   margin: auto;
 }
 
+@media screen and (max-width: 700px) {
+  body {
+    margin-block: 0;
+  }
+}
+
 /*
   MARK: WRAPPER ----------------------------------
 */
@@ -179,6 +185,14 @@ section {
   overflow: overlay;
   position: relative;
   overflow: auto;
+
+  p:last-of-type {
+    padding-block-end: 2rem;
+  }
+
+  h4 {
+    justify-self: center;
+  }
 }
 
 h1,
@@ -188,16 +202,58 @@ h4,
 h5,
 p {
   padding: 2rem 2rem 0 2rem;
-  max-width: 65ch;
+  /* max-width: 65ch; */
 }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+  padding-block-end: 2rem;
+  justify-self: center;
+}
+
+
+
+
 figure {
-  margin-block: 2rem;
-  margin-inline-start: 2rem;
+  margin: 0;
+  padding: 0;
+  position: relative;
+
+  figcaption {
+    font-size: inherit;
+    margin-inline: 2rem;
+  }
 
   img {
     max-width: 100%;
     max-height: 40em;
+    margin-block: 2rem;
+    margin-inline: 2rem;
     position: relative;
+  }
+
+  img::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    top: 0;
+    left: 0;
+    background-attachment: initial;
+    background-color: transparent;
+    background-image: url('../images/app/corner.svg');
+    background-repeat: no-repeat;
+  }
+}
+
+hr {
+  margin-block-start: 2rem;
+}
+
+@media screen and (max-width: 700px) {
+  figure img {
+    margin-inline: 0;
   }
 }

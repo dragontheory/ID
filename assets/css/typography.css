@@ -2,6 +2,34 @@
 @import url('https://fonts.cdnfonts.com/css/agencyfb-2');
 @import url('https://fonts.googleapis.com/css?family=Electrolize');
 
+@font-face {
+  font-family: 'corbel';
+  src: url('fonts/corbell.woff2') format('woff2'),
+      url('fonts/corbell.woff') format('woff'),
+      url("fonts/corbell.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'footlight';
+  src: url('fonts/footlightl.woff2') format('woff2'),
+      url('fonts/footlightl.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'footlighti';
+  src: url('fonts/footlighti.woff2') format('woff2'),
+      url('fonts/footlighti.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
 /*
   Fluid typography:
   https://cqi-units-fluid-typography.webflow.io/
@@ -12,6 +40,7 @@
 
 body {
   line-height: 1.5;
+  font-size: clamp(1.25rem, 3cqi, 1.5rem);
 }
 
 article {
@@ -20,13 +49,13 @@ article {
   h1 {font-size: clamp(1.5rem, 4cqi, 2rem);}
   h2 {font-size: clamp(1.2rem, 3.5cqi, 1.7rem);}
   h3 {font-size: clamp(1rem, 3cqi, 1.5rem);}
+}
 
+h1, h2, h3, h4 {
+  font-family: 'footlighti', 'Times New Roman', Times, serif;
+  letter-spacing: .3rem;
 }
 
 section {
   container-type: inline-size;
-
-  p {
-    font-size: clamp(1.25rem, 3cqi, 1.5rem);
-  }
 }
