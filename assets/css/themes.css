@@ -20,6 +20,8 @@ iframe {
 :root {
   color-scheme: dark light;
 
+  --fill-color: currentColor;
+
   --background-image: ;
 
   --transition-time: 250ms;
@@ -137,8 +139,10 @@ nav a {
 } */
 
 svg {
-  fill: currentColor
+  fill: currentColor;
 }
+
+hr {color: currentColor;}
 
 
 /*

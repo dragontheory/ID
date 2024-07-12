@@ -2,20 +2,6 @@
   MARK: LAYOUT --------------------------------------------
 */
 
-
-/*
-  MARK: RESET --------------------------------------------
-*/
-*:before,
-*:after,
-*,
-::after,
-::before {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
 body {
   overflow: hidden;
   max-width: clamp(320px, 90%, 1000px);
@@ -76,6 +62,21 @@ social-media {
   }
 }
 
+/*
+  MARK: HEADER/FOOTER ----------------------------
+*/
+header,
+footer {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-auto-flow: column;
+  grid-column: 1 / -1;
+  align-items: center;
+  user-select: none;
+  border-radius: .3rem;
+}
+
+
 
 /*
   MARK: NAV ----------------------------------
@@ -89,10 +90,7 @@ nav {
   margin-block-end: -1rem;
 
   ul {
-    list-style: none;
     display: grid;
-    margin: 0;
-    gap: .5em;
     grid-template-columns: auto auto auto auto auto;
     grid-template-rows: auto;
 
@@ -125,21 +123,6 @@ nav:has(#radio05:checked) ~ main article#tab05 {
 /* nav:has(input:checked) ~ main article {
   display: grid;
 } */
-
-
-/*
-  MARK: HEADER/FOOTER ----------------------------
-*/
-header,
-footer {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  grid-auto-flow: column;
-  grid-column: 1 / -1;
-  align-items: center;
-  user-select: none;
-  border-radius: .3rem;
-}
 
 /*
   MARK: TABS ----------------------------------
@@ -212,11 +195,13 @@ h4,
 h5 {
   padding-block-end: 2rem;
   justify-self: center;
+  text-align: center;
 }
 
 
-
-
+/*
+  MARK: FIGURE -------------------------------------
+*/
 figure {
   margin: 0;
   padding: 0;
@@ -243,17 +228,25 @@ figure {
     left: 0;
     background-attachment: initial;
     background-color: transparent;
-    background-image: url('../images/app/corner.svg');
+    background-image: url('/assets/images/app/corner.svg');
     background-repeat: no-repeat;
   }
 }
 
 hr {
-  margin-block-start: 2rem;
+  height: 1.5rem;
+  margin-block-start: 3rem;
+  margin-block-end: 1rem;
+  background: url('/assets/images/app/hr.svg') no-repeat center center;
+  border: 0;
 }
 
 @media screen and (max-width: 700px) {
   figure img {
     margin-inline: 0;
+  }
+
+  nav ul li label{
+    padding-inline: 1rem;
   }
 }
