@@ -169,30 +169,21 @@ section {
   position: relative;
   overflow: auto;
 
-  p:last-of-type {
+  /* p:last-of-type {
     padding-block-end: 2rem;
-  }
+  } */
 
   h4 {
     justify-self: center;
   }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-p {
+:where(h1, h2, h3, h4, h5, p) {
   padding: 2rem 2rem 0 2rem;
   /* max-width: 65ch; */
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
+:where(h1, h2, h3, h4, h5) {
   padding-block-end: 2rem;
   justify-self: center;
   text-align: center;
@@ -241,12 +232,38 @@ hr {
   border: 0;
 }
 
+/*
+  MARK: MEDIA QUERIES -------------------------------------
+*/
 @media screen and (max-width: 700px) {
   figure img {
     margin-inline: 0;
+    margin-block: .5rem;
   }
 
-  nav ul li label{
+  app-container {
+    gap: 0;
+  }
+
+  app-logo,
+  app-ad,
+  sign-in,
+  powered-by,
+  social-media {
+    padding-block: .5rem;
+    padding-inline: .5rem;
+  }
+
+  nav ul li label {
     padding-inline: 1rem;
+  }
+
+  :where(h1, h2, h3, h4, h5, p) {
+    padding: 1rem 1rem 0 1rem;
+    /* max-width: 65ch; */
+  }
+
+  hr {
+    margin-block-start: 1rem;
   }
 }
