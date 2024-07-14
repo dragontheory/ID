@@ -180,13 +180,14 @@ section {
 
 :where(h1, h2, h3, h4, h5, p) {
   padding: 2rem 2rem 0 2rem;
-  /* max-width: 65ch; */
 }
 
 :where(h1, h2, h3, h4, h5) {
   padding-block-end: 2rem;
   justify-self: center;
   text-align: center;
+  position: sticky;
+  top: 0;
 }
 
 
